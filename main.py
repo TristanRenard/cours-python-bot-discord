@@ -1,5 +1,5 @@
 import discord
-from utils import salutation
+from utils import getservinfo,salutation
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -16,8 +16,9 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('$hello'):
-        await message.channel.send('Hello!')
+server-info
+    if message.content.startswith('$get-info'):
+        await getservinfo.get_server_info(message)
 
 @client.event
 async def on_member_join(member):
