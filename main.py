@@ -1,11 +1,12 @@
 import discord
-from utils import getservinfo,salutation
+from utils import getservinfo,salutation,converter
 
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True  # Activer les événements liés aux membres
 
 client = discord.Client(intents=intents)
+
 
 @client.event
 async def on_ready():
@@ -17,6 +18,9 @@ async def on_message(message):
         return
     if message.content.startswith('$get-info'):
         await getservinfo.get_server_info(message)
+    if message.content.startswith('$convert'):
+        ct = message.content.split(" ")
+        await converter.convert(message.channel, ct[1])
 
 @client.event
 async def on_member_join(member):
