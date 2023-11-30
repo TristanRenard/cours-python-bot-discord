@@ -1,4 +1,5 @@
 import discord
+from utils import getservinfo
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -14,7 +15,9 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('$hello'):
-        await message.channel.send('Hello!')
 
-client.run('MTE3OTcxMzQyNTE0OTAxODExMg.GNV-7P.kKgSUZKbGKsa9yoXZr8UOWjm15Wc8E27zt8ds0')
+    if message.content.startswith('$get-info'):
+        await getservinfo.get_server_info(message)
+
+
+client.run('MTE3OTcyOTQwNzEyNDk2NzU0NA.GoxJm-.Y6RdN07PPr6WJIg2mUE5UrP5RucA2egm4sI5F8')
