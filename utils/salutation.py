@@ -1,4 +1,4 @@
-async def salutation(client,member):
+async def salutation(client, member):
     channel = client.get_channel(1179728507828445265)
 
     if channel is not None:
