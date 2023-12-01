@@ -50,6 +50,8 @@ async def on_message(message: discord.Message):
             await clear.clear(message.channel, message.author.roles[1])
         with open("logs/moderation/clear.txt", "a") as f:
             f.write(f"{message.author} : {message.content}\n")
+
+    # ban command
     elif message.content.startswith(prefix + 'ban'):
         content = message.content.split(' ')
         try:
@@ -61,14 +63,20 @@ async def on_message(message: discord.Message):
             await message.channel.send("Vous devez mentionner un utilisateur !")
         with open("logs/moderation/ban.txt", "a") as f:
             f.write(f"{message.author} : {message.content}\n")
+    # chifumi command
     elif message.content.startswith(prefix + 'chifumi'):
         await chifumi.chifumi(message, client)
         with open("logs/commands/chifumi.txt", "a") as f:
             f.write(f"{message.author} : {message.content}\n")
+    # danger command
     elif message.content.startswith(prefix + 'danger'):
         await danger.danger(message)
+
+    # logs-file command
     elif message.content.startswith(prefix + 'logs-file'):
         await message.channel.send(file=discord.File('logs/messages.txt'))
+
+    # logs command
     elif message.content.startswith(prefix + 'logs'):
         embed = discord.Embed(title="Logs", description="Voici les logs", url="http://127.0.0.1:5000/", color=0xf7f7f7)
         await message.channel.send(embed=embed)

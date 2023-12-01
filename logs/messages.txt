@@ -95,3 +95,33 @@ cours-python-2#5970 :
 parlabarbedemerlin : $logs
 cours-python-2#5970 : 
 parlabarbedemerlin : $clear
+parlabarbedemerlin : $logs
+cours-python-2#5970 : 
+parlabarbedemerlin : $clear
+parlabarbedemerlin : $clear
+parlabarbedemerlin : $logs
+cours-python-2#5970 : 
+parlabarbedemerlin : $logs-file
+cours-python-2#5970 : 
+parlabarbedemerlin : $ban <@1179713425149018112> ancien bot
+parlabarbedemerlin : $ban <@1075330260310183968> exemple
+cours-python-2#5970 : <@1075330260310183968> a été banni !
+parlabarbedemerlin : $clear
+el_pepito95 : 
+Clippy#5970 : Bienvenue <@697199982368915526> sur le serveur!
+el_pepito95 : $help
+parlabarbedemerlin : $get-info
+Clippy#5970 : 
+el_pepito95 : $logs
+Clippy#5970 : 
+parlabarbedemerlin : $logs-file
+Clippy#5970 : 
+parlabarbedemerlin : typescript
+Clippy#5970 : <@852647642126614538> tu n'as pas le droit d'envoyer ce message ici !
+parlabarbedemerlin : $danger
+Clippy#5970 : 
+parlabarbedemerlin : $clear
+parlabarbedemerlin : $ban <@697199982368915526>
+Clippy#5970 : <@697199982368915526> a été banni !
+parlabarbedemerlin : $clear
+parlabarbedemerlin : c
