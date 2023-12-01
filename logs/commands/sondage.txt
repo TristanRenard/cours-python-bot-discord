@@ -1,0 +1,2 @@
+parlabarbedemerlin : $create-sondage / aimes tu le bleu ? / choix 1 / choix 2
+parlabarbedemerlin : $create-sondage / aimes tu le rouge / oui / non / peut être
