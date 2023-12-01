@@ -1,5 +1,5 @@
 import discord
-from utils import getservinfo, salutation, sondage, chifumi
+from utils import getservinfo, salutation, sondage, chifumi,converter
 from moderation import checkMsg, clear, ban
 
 intents = discord.Intents.default()
@@ -7,6 +7,7 @@ intents.message_content = True
 intents.members = True  # Activer les événements liés aux membres
 
 client = discord.Client(intents=intents)
+
 
 ban_words = ["TS", "typescript", "TypeScript", "ts", "typescript", ]
 
@@ -23,6 +24,9 @@ async def on_message(message : discord.Message):
         return
     if message.content.startswith('$get-info'):
         await getservinfo.get_server_info(message)
+    elif message.content.startswith('$convert'):
+        ct = message.content.split(" ")
+        await converter.convert(message.channel, ct[1])
     elif message.content.startswith('$create-sondage'):
         content = message.content.split(' / ')
         question = content[1]
@@ -45,7 +49,6 @@ async def on_message(message : discord.Message):
             await message.channel.send("Vous devez mentionner un utilisateur !")
     elif message.content.startswith('$chifumi'):
         await chifumi.chifumi(message, client)
-
 
 @client.event
 async def on_member_join(member):
